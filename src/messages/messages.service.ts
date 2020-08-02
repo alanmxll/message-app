@@ -27,7 +27,7 @@ export class MessagesService {
     updatedMsg.nick = updatedMessage.nick;
     updatedMsg.message = updatedMessage.message;
 
-    return await this.messageRepository.save(updatedMessage);
+    return await this.messageRepository.save(updatedMsg);
   }
 
   async deleteMessage(idMessage: number): Promise<any> {
