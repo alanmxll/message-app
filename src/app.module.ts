@@ -3,6 +3,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MessagesController } from './messages/messages.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { MessagesService } from './messages/messages.service';
+import { Message } from './messages/entities/message.entity';
 
 @Module({
   imports: [
@@ -16,8 +18,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
+    TypeOrmModule.forFeature([Message])
   ],
   controllers: [AppController, MessagesController],
-  providers: [AppService],
+  providers: [AppService, MessagesService],
 })
 export class AppModule { }
