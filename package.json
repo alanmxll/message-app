@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@nestjs/common": "^11.0.16",
-    "@nestjs/core": "^11.1.11",
+    "@nestjs/core": "^11.1.18",
     "@nestjs/platform-express": "^11.1.11",
     "@nestjs/typeorm": "^11.0.0",
     "mysql": "^2.18.1",
